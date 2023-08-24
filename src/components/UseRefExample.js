@@ -2,6 +2,7 @@ import React, { useRef } from "react";
 
 function UseRefExample() {
   const inputRef = useRef();
+  const paraRef = useRef();
 
   const onSubmit = (e) => {
     e.preventDefault();
@@ -10,6 +11,8 @@ function UseRefExample() {
     inputRef.current.value = "hello";
     //changing anything in the style
     inputRef.current.style.backgroundColor = "red";
+
+    paraRef.current.innerText = "Goodbye";
   };
 
   return (
@@ -20,7 +23,9 @@ function UseRefExample() {
         <button type="submit" className="bg-gray-500 px-4 m-5 text-white py-4">
           Submit
         </button>
-        <p ref={paraRef}>hello</p>
+        <p onClick={() => inputRef.current.focus()} ref={paraRef}>
+          hello
+        </p>
       </form>
     </div>
   );
