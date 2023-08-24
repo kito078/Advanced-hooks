@@ -1,9 +1,10 @@
 import "./App.css";
+import UseRefExample from "./components/UseRefExample";
 
 function App() {
   return (
-    <div className="App">
-      <h1 class="text-3xl font-bold underline">Hello world!</h1>
+    <div className="App mt-5">
+      <UseRefExample />
     </div>
   );
 }
