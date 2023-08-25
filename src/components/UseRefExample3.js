@@ -1,7 +1,10 @@
 import React from "react";
+import Todo from "./Todo";
 
 function UseRefExample3() {
-  return <div>3</div>;
+  const [showTodo, setShowTodo] = useState(true);
+
+  return <div>{showTodo && <Todo />}</div>;
 }
 
 export default UseRefExample3;
