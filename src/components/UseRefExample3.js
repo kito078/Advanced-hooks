@@ -1,10 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import Todo from "./Todo";
 
 function UseRefExample3() {
   const [showTodo, setShowTodo] = useState(true);
 
-  return <div>{showTodo && <Todo />}</div>;
+  return (
+    <div>
+      {showTodo && <Todo />}
+      <button onClick={() => setShowTodo(!showTodo)} className="bg-blue-500">
+        Toggle Todo
+      </button>
+    </div>
+  );
 }
 
 export default UseRefExample3;
