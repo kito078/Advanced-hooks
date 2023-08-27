@@ -5,7 +5,17 @@ function CustomHookExample1() {
   const res = UseFetch("https://jsonplaceholder.typicode.com/posts", {});
   console.log(res);
 
-  return <div>use fetch</div>;
+  if (loading) {
+    return <h3>Loading...</h3>;
+  }
+
+  return (
+    <div>
+      {DataTransfer.map((post) => {
+        <h3 key={post.id}>{post.title}</h3>;
+      })}
+    </div>
+  );
 }
 
 export default CustomHookExample1;
