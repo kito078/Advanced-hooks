@@ -15,10 +15,11 @@ function CustomHookExample1() {
 
   return (
     <div>
-      {data &&
-        data.map((post) => {
-          <h3 key={post.id}>{post.title}</h3>;
-        })}
+      {data.map((post) => {
+        <h3 key={post.id} className="text-3xl text-gray-500">
+          {post.title}
+        </h3>;
+      })}
     </div>
   );
 }
