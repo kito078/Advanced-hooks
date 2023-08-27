@@ -7,7 +7,6 @@ import UseRefExample3 from "./components/UseRefExample3";
 function App() {
   return (
     <div className="App mt-5">
-      {/* <UseRefExample /> */}
       {/* <UseRefExample2 /> */}
       {/* <UseRefExample3 /> */}
       <CustomHookExample1 />
