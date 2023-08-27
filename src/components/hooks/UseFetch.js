@@ -9,7 +9,7 @@ function UseFetch() {
     const fetchData = async (url, options) => {
       try {
         const response = await fetch(url, options);
-        const data = await response.json();
+        const data = await response.json2();
 
         setData(data);
         setLoading(false);
@@ -18,6 +18,7 @@ function UseFetch() {
         setLoading(false);
       }
     };
+    fetchData();
   }, []);
 
   return { data, loading, error };
